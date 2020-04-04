@@ -1,0 +1,17 @@
+application:
+  config:
+    profileName: local
+
+server:
+  port: 8080
+
+spring:
+  batch:
+    job:
+      enabled: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+input: file:/C:/temp/lista_alunos.txt

@@ -1,0 +1,27 @@
+application:
+  config:
+    profileName: local
+
+server:
+  port: 8080
+
+spring:
+  batch:
+    job:
+      enabled: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/aluno?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: sa
+
+input: file:/C:/temp/lista_alunos.txt
